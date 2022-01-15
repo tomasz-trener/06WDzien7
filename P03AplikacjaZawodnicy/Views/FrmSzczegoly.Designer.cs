@@ -43,12 +43,14 @@ namespace P03AplikacjaZawodnicy.Views
             this.btnZapisz = new System.Windows.Forms.Button();
             this.dtpDataUrodzenia = new System.Windows.Forms.DateTimePicker();
             this.txtPotwierdzenie = new System.Windows.Forms.TextBox();
+            this.panKontrolkiZawodnika = new System.Windows.Forms.Panel();
+            this.panKontrolkiZawodnika.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 19);
+            this.label1.Location = new System.Drawing.Point(17, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 0;
@@ -56,14 +58,14 @@ namespace P03AplikacjaZawodnicy.Views
             // 
             // txtImie
             // 
-            this.txtImie.Location = new System.Drawing.Point(16, 39);
+            this.txtImie.Location = new System.Drawing.Point(20, 19);
             this.txtImie.Name = "txtImie";
             this.txtImie.Size = new System.Drawing.Size(165, 20);
             this.txtImie.TabIndex = 1;
             // 
             // txtNazwisko
             // 
-            this.txtNazwisko.Location = new System.Drawing.Point(16, 84);
+            this.txtNazwisko.Location = new System.Drawing.Point(20, 64);
             this.txtNazwisko.Name = "txtNazwisko";
             this.txtNazwisko.Size = new System.Drawing.Size(165, 20);
             this.txtNazwisko.TabIndex = 3;
@@ -71,7 +73,7 @@ namespace P03AplikacjaZawodnicy.Views
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 64);
+            this.label2.Location = new System.Drawing.Point(17, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -79,7 +81,7 @@ namespace P03AplikacjaZawodnicy.Views
             // 
             // txtKraj
             // 
-            this.txtKraj.Location = new System.Drawing.Point(16, 130);
+            this.txtKraj.Location = new System.Drawing.Point(20, 110);
             this.txtKraj.Name = "txtKraj";
             this.txtKraj.Size = new System.Drawing.Size(165, 20);
             this.txtKraj.TabIndex = 5;
@@ -87,7 +89,7 @@ namespace P03AplikacjaZawodnicy.Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 110);
+            this.label3.Location = new System.Drawing.Point(17, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 4;
@@ -97,7 +99,7 @@ namespace P03AplikacjaZawodnicy.Views
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 156);
+            this.label4.Location = new System.Drawing.Point(17, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 6;
@@ -105,7 +107,7 @@ namespace P03AplikacjaZawodnicy.Views
             // 
             // txtWaga
             // 
-            this.txtWaga.Location = new System.Drawing.Point(16, 224);
+            this.txtWaga.Location = new System.Drawing.Point(20, 204);
             this.txtWaga.Name = "txtWaga";
             this.txtWaga.Size = new System.Drawing.Size(165, 20);
             this.txtWaga.TabIndex = 9;
@@ -113,7 +115,7 @@ namespace P03AplikacjaZawodnicy.Views
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 204);
+            this.label5.Location = new System.Drawing.Point(17, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 8;
@@ -121,7 +123,7 @@ namespace P03AplikacjaZawodnicy.Views
             // 
             // txtWzrost
             // 
-            this.txtWzrost.Location = new System.Drawing.Point(16, 274);
+            this.txtWzrost.Location = new System.Drawing.Point(20, 254);
             this.txtWzrost.Name = "txtWzrost";
             this.txtWzrost.Size = new System.Drawing.Size(165, 20);
             this.txtWzrost.TabIndex = 11;
@@ -129,7 +131,7 @@ namespace P03AplikacjaZawodnicy.Views
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 254);
+            this.label6.Location = new System.Drawing.Point(17, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 10;
@@ -148,7 +150,7 @@ namespace P03AplikacjaZawodnicy.Views
             // dtpDataUrodzenia
             // 
             this.dtpDataUrodzenia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataUrodzenia.Location = new System.Drawing.Point(16, 176);
+            this.dtpDataUrodzenia.Location = new System.Drawing.Point(20, 156);
             this.dtpDataUrodzenia.Name = "dtpDataUrodzenia";
             this.dtpDataUrodzenia.Size = new System.Drawing.Size(165, 20);
             this.dtpDataUrodzenia.TabIndex = 13;
@@ -161,28 +163,38 @@ namespace P03AplikacjaZawodnicy.Views
             this.txtPotwierdzenie.TabIndex = 14;
             this.txtPotwierdzenie.Visible = false;
             // 
+            // panKontrolkiZawodnika
+            // 
+            this.panKontrolkiZawodnika.Controls.Add(this.txtWaga);
+            this.panKontrolkiZawodnika.Controls.Add(this.label1);
+            this.panKontrolkiZawodnika.Controls.Add(this.dtpDataUrodzenia);
+            this.panKontrolkiZawodnika.Controls.Add(this.txtImie);
+            this.panKontrolkiZawodnika.Controls.Add(this.label2);
+            this.panKontrolkiZawodnika.Controls.Add(this.txtWzrost);
+            this.panKontrolkiZawodnika.Controls.Add(this.txtNazwisko);
+            this.panKontrolkiZawodnika.Controls.Add(this.label6);
+            this.panKontrolkiZawodnika.Controls.Add(this.label3);
+            this.panKontrolkiZawodnika.Controls.Add(this.txtKraj);
+            this.panKontrolkiZawodnika.Controls.Add(this.label5);
+            this.panKontrolkiZawodnika.Controls.Add(this.label4);
+            this.panKontrolkiZawodnika.Location = new System.Drawing.Point(16, 12);
+            this.panKontrolkiZawodnika.Name = "panKontrolkiZawodnika";
+            this.panKontrolkiZawodnika.Size = new System.Drawing.Size(198, 287);
+            this.panKontrolkiZawodnika.TabIndex = 15;
+            // 
             // FrmSzczegoly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(194, 362);
+            this.ClientSize = new System.Drawing.Size(219, 362);
+            this.Controls.Add(this.panKontrolkiZawodnika);
             this.Controls.Add(this.txtPotwierdzenie);
-            this.Controls.Add(this.dtpDataUrodzenia);
             this.Controls.Add(this.btnZapisz);
-            this.Controls.Add(this.txtWzrost);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtWaga);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtKraj);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNazwisko);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtImie);
-            this.Controls.Add(this.label1);
             this.Name = "FrmSzczegoly";
             this.Text = "FrmSzczegoly";
             this.Load += new System.EventHandler(this.FrmSzczegoly_Load);
+            this.panKontrolkiZawodnika.ResumeLayout(false);
+            this.panKontrolkiZawodnika.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +216,6 @@ namespace P03AplikacjaZawodnicy.Views
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.DateTimePicker dtpDataUrodzenia;
         private System.Windows.Forms.TextBox txtPotwierdzenie;
+        private System.Windows.Forms.Panel panKontrolkiZawodnika;
     }
 }

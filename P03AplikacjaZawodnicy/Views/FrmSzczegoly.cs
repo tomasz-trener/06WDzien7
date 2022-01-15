@@ -44,14 +44,28 @@ namespace P03AplikacjaZawodnicy.Views
             txtWaga.Text = Convert.ToString(zawodnik.Waga);
             txtWzrost.Text = Convert.ToString(zawodnik.Wzrost);
 
+            
+
             if (trybOkienka == TrybOkienka.Usuwanie)
             {
-                txtImie.Enabled = false;
-                txtNazwisko.Enabled = false;
-                txtKraj.Enabled = false;
-                dtpDataUrodzenia.Enabled = false;
-                txtWaga.Enabled = false;
-                txtWzrost.Enabled = false;
+                foreach (Control k in panKontrolkiZawodnika.Controls)
+                    k.Enabled = false;
+
+                // iterujemy po wszystkich kontrolkach które są texboxami i tylko dla textboxkow ustawiamy enabled na false
+                //for (int i = 0; i < Controls.Count; i++)
+                //{
+                //    var kontrolka = Controls[i];
+                //    if (kontrolka is TextBox)
+                //        kontrolka.Enabled = false;
+                //}
+
+                // ręcznie wskazujemy ktore kontrolki maja byc wylaczone 
+                //txtImie.Enabled = false;
+                //txtNazwisko.Enabled = false;
+                //txtKraj.Enabled = false;
+                //dtpDataUrodzenia.Enabled = false;
+                //txtWaga.Enabled = false;
+                //txtWzrost.Enabled = false;
                 btnZapisz.Text = "Usuń";
             }
         }

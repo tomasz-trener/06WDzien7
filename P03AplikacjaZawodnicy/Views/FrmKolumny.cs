@@ -25,7 +25,6 @@ namespace P03AplikacjaZawodnicy.Views
             InitializeComponent();
         }
 
- 
         private void chlbKolumny_SelectedValueChanged(object sender, EventArgs e)
         {
             frmZawodnicy.Odswiez();

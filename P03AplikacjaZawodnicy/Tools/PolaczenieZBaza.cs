@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P03AplikacjaZawodnicy.Tools
 {
-    class PolaczenieZBaza
+    public class PolaczenieZBaza
     {
 
         private string connString;

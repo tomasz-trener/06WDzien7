@@ -9,7 +9,7 @@ using static System.Windows.Forms.CheckedListBox;
 
 namespace P03AplikacjaZawodnicy.Repositories
 {
-    class ZawodnicyRepository
+    public class ZawodnicyRepository
     {
         string connString = "Data Source=.;Initial Catalog=A_Zawodnicy;User ID=sa;Password=alx";
 
