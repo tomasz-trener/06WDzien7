@@ -25,21 +25,7 @@ namespace P03AplikacjaZawodnicy.Views
             InitializeComponent();
         }
 
-        private void chlbKolumny_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void chlbKolumny_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-           
-        }
-
-        private void chlbKolumny_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
+ 
         private void chlbKolumny_SelectedValueChanged(object sender, EventArgs e)
         {
             frmZawodnicy.Odswiez();

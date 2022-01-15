@@ -46,9 +46,6 @@ namespace P03AplikacjaZawodnicy.Views
             this.chlbKolumny.Name = "chlbKolumny";
             this.chlbKolumny.Size = new System.Drawing.Size(120, 94);
             this.chlbKolumny.TabIndex = 0;
-            this.chlbKolumny.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.chlbKolumny_ItemCheck);
-            this.chlbKolumny.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chlbKolumny_MouseClick);
-            this.chlbKolumny.SelectedIndexChanged += new System.EventHandler(this.chlbKolumny_SelectedIndexChanged);
             this.chlbKolumny.SelectedValueChanged += new System.EventHandler(this.chlbKolumny_SelectedValueChanged);
             // 
             // FrmKolumny
