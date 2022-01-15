@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace P02PrzykladKomunikacjiPomiedzyKlasami
 {
+    //https://github.com/tomasz-trener/06WDzien7
     class Osoba
     {
         string imie;

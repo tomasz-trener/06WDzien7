@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01KomunikacjaPomiedzyFormu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02PrzykladKomunikacjiPomiedzyKlasami", "P02PrzykladKomunikacjiPomiedzyKlasami\P02PrzykladKomunikacjiPomiedzyKlasami.csproj", "{F9569F58-0253-4E09-B5AE-1429223BBD33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03AplikacjaZawodnicy", "P03AplikacjaZawodnicy\P03AplikacjaZawodnicy.csproj", "{0DEB3E63-7537-4FF7-9AE1-45CFDB075A10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F9569F58-0253-4E09-B5AE-1429223BBD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9569F58-0253-4E09-B5AE-1429223BBD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9569F58-0253-4E09-B5AE-1429223BBD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEB3E63-7537-4FF7-9AE1-45CFDB075A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEB3E63-7537-4FF7-9AE1-45CFDB075A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEB3E63-7537-4FF7-9AE1-45CFDB075A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEB3E63-7537-4FF7-9AE1-45CFDB075A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
