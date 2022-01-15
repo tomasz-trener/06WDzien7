@@ -93,6 +93,7 @@ namespace P03AplikacjaZawodnicy.Views
             this.btnKolumny.TabIndex = 5;
             this.btnKolumny.Text = "Kolumny";
             this.btnKolumny.UseVisualStyleBackColor = true;
+            this.btnKolumny.Click += new System.EventHandler(this.btnKolumny_Click);
             // 
             // FrmZawodnicy
             // 

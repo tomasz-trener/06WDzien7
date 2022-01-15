@@ -14,6 +14,7 @@ namespace P03AplikacjaZawodnicy.Views
 {
     public partial class FrmZawodnicy : Form
     {
+        FrmKolumny fk;
         public FrmZawodnicy()
         {
             InitializeComponent();
@@ -22,7 +23,13 @@ namespace P03AplikacjaZawodnicy.Views
         public void Odswiez()
         {
             ZawodnicyRepository zr = new ZawodnicyRepository();
-            zr.Wczytaj();
+
+            if (fk != null)
+                zr.Wczytaj(fk.ChlbKolumny.CheckedItems);
+            else
+                zr.Wczytaj();
+
+
             lbDane.DataSource = zr.Zawodnicy;
             lbDane.DisplayMember = "WybraneKolumny";
         }
@@ -50,6 +57,12 @@ namespace P03AplikacjaZawodnicy.Views
             var zaznaczony = (Zawodnik)lbDane.SelectedValue;
             FrmSzczegoly fs = new FrmSzczegoly(this, zaznaczony, TrybOkienka.Usuwanie);
             fs.Show();
+        }
+
+        private void btnKolumny_Click(object sender, EventArgs e)
+        {
+            fk = new FrmKolumny(this);
+            fk.Show();
         }
     }
 }
