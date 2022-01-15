@@ -1,4 +1,5 @@
-﻿using P03AplikacjaZawodnicy.Repositories;
+﻿using P03AplikacjaZawodnicy.Domains;
+using P03AplikacjaZawodnicy.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,21 @@ namespace P03AplikacjaZawodnicy.Views
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            FrmSzczegoly fs = new FrmSzczegoly(this);
+            FrmSzczegoly fs = new FrmSzczegoly(this,TrybOkienka.Stworzenie);
+            fs.Show();
+        }
+
+        private void btnEdytuj_Click(object sender, EventArgs e)
+        {
+            var zaznaczony = (Zawodnik)lbDane.SelectedValue;
+            FrmSzczegoly fs = new FrmSzczegoly(this, zaznaczony, TrybOkienka.Edycja);
+            fs.Show();
+        }
+
+        private void btnUsun_Click(object sender, EventArgs e)
+        {
+            var zaznaczony = (Zawodnik)lbDane.SelectedValue;
+            FrmSzczegoly fs = new FrmSzczegoly(this, zaznaczony, TrybOkienka.Usuwanie);
             fs.Show();
         }
     }

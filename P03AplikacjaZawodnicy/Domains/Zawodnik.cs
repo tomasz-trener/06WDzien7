@@ -7,7 +7,7 @@ using static System.Windows.Forms.CheckedListBox;
 
 namespace P03AplikacjaZawodnicy.Domains
 {
-    class Zawodnik
+    public class Zawodnik
     {
         public int Id_zawodnika;
         public int? Id_trenera; //dodanie ? powoduje, że typ jest nullable 

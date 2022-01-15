@@ -34,6 +34,7 @@ namespace P03AplikacjaZawodnicy.Views
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnEdytuj = new System.Windows.Forms.Button();
             this.btnUsun = new System.Windows.Forms.Button();
+            this.btnKolumny = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDane
@@ -72,6 +73,7 @@ namespace P03AplikacjaZawodnicy.Views
             this.btnEdytuj.TabIndex = 3;
             this.btnEdytuj.Text = "Edytuj";
             this.btnEdytuj.UseVisualStyleBackColor = true;
+            this.btnEdytuj.Click += new System.EventHandler(this.btnEdytuj_Click);
             // 
             // btnUsun
             // 
@@ -81,18 +83,29 @@ namespace P03AplikacjaZawodnicy.Views
             this.btnUsun.TabIndex = 4;
             this.btnUsun.Text = "Usuń";
             this.btnUsun.UseVisualStyleBackColor = true;
+            this.btnUsun.Click += new System.EventHandler(this.btnUsun_Click);
             // 
-            // Form1
+            // btnKolumny
+            // 
+            this.btnKolumny.Location = new System.Drawing.Point(280, 133);
+            this.btnKolumny.Name = "btnKolumny";
+            this.btnKolumny.Size = new System.Drawing.Size(75, 23);
+            this.btnKolumny.TabIndex = 5;
+            this.btnKolumny.Text = "Kolumny";
+            this.btnKolumny.UseVisualStyleBackColor = true;
+            // 
+            // FrmZawodnicy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 323);
+            this.Controls.Add(this.btnKolumny);
             this.Controls.Add(this.btnUsun);
             this.Controls.Add(this.btnEdytuj);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnWczytaj);
             this.Controls.Add(this.lbDane);
-            this.Name = "Form1";
+            this.Name = "FrmZawodnicy";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -105,6 +118,7 @@ namespace P03AplikacjaZawodnicy.Views
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnEdytuj;
         private System.Windows.Forms.Button btnUsun;
+        private System.Windows.Forms.Button btnKolumny;
     }
 }
 

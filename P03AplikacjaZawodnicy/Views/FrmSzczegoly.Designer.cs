@@ -42,6 +42,7 @@ namespace P03AplikacjaZawodnicy.Views
             this.label6 = new System.Windows.Forms.Label();
             this.btnZapisz = new System.Windows.Forms.Button();
             this.dtpDataUrodzenia = new System.Windows.Forms.DateTimePicker();
+            this.txtPotwierdzenie = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -152,11 +153,20 @@ namespace P03AplikacjaZawodnicy.Views
             this.dtpDataUrodzenia.Size = new System.Drawing.Size(165, 20);
             this.dtpDataUrodzenia.TabIndex = 13;
             // 
+            // txtPotwierdzenie
+            // 
+            this.txtPotwierdzenie.Location = new System.Drawing.Point(16, 332);
+            this.txtPotwierdzenie.Name = "txtPotwierdzenie";
+            this.txtPotwierdzenie.Size = new System.Drawing.Size(165, 20);
+            this.txtPotwierdzenie.TabIndex = 14;
+            this.txtPotwierdzenie.Visible = false;
+            // 
             // FrmSzczegoly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(194, 339);
+            this.ClientSize = new System.Drawing.Size(194, 362);
+            this.Controls.Add(this.txtPotwierdzenie);
             this.Controls.Add(this.dtpDataUrodzenia);
             this.Controls.Add(this.btnZapisz);
             this.Controls.Add(this.txtWzrost);
@@ -193,5 +203,6 @@ namespace P03AplikacjaZawodnicy.Views
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.DateTimePicker dtpDataUrodzenia;
+        private System.Windows.Forms.TextBox txtPotwierdzenie;
     }
 }

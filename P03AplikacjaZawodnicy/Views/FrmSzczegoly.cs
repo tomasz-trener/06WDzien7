@@ -12,14 +12,48 @@ using System.Windows.Forms;
 
 namespace P03AplikacjaZawodnicy.Views
 {
+    public enum TrybOkienka
+    {
+        Stworzenie,
+        Edycja,
+        Usuwanie,
+
+    }
+
     public partial class FrmSzczegoly : Form
     {
         FrmZawodnicy frmZawodnicy;
+        Zawodnik zawodnik;
+        TrybOkienka trybOkienka;
 
-        public FrmSzczegoly(FrmZawodnicy frmZawodnicy)
+        public FrmSzczegoly(FrmZawodnicy frmZawodnicy, TrybOkienka trybOkienka)
         {
+            this.trybOkienka = trybOkienka;
             this.frmZawodnicy = frmZawodnicy;
             InitializeComponent();
+        }
+
+        public FrmSzczegoly(FrmZawodnicy frmZawodnicy, Zawodnik zaznaczony, TrybOkienka trybOkienka):this(frmZawodnicy, trybOkienka)
+        {
+            zawodnik = zaznaczony;
+
+            txtImie.Text = zawodnik.Imie;
+            txtNazwisko.Text = zawodnik.Nazwisko;
+            txtKraj.Text = zawodnik.Kraj;
+            dtpDataUrodzenia.Value = zawodnik.DataUrodzenia;
+            txtWaga.Text = Convert.ToString(zawodnik.Waga);
+            txtWzrost.Text = Convert.ToString(zawodnik.Wzrost);
+
+            if (trybOkienka == TrybOkienka.Usuwanie)
+            {
+                txtImie.Enabled = false;
+                txtNazwisko.Enabled = false;
+                txtKraj.Enabled = false;
+                dtpDataUrodzenia.Enabled = false;
+                txtWaga.Enabled = false;
+                txtWzrost.Enabled = false;
+                btnZapisz.Text = "Usuń";
+            }
         }
 
         private void FrmSzczegoly_Load(object sender, EventArgs e)
@@ -38,7 +72,31 @@ namespace P03AplikacjaZawodnicy.Views
             z.Wzrost = Convert.ToInt32(txtWzrost.Text);
 
             ZawodnicyRepository zr = new ZawodnicyRepository();
-            zr.Dodaj(z);
+
+            if (trybOkienka == TrybOkienka.Stworzenie)
+            {
+                zr.Dodaj(z);
+            }
+            else if(trybOkienka == TrybOkienka.Edycja)
+            {
+                // czyli jestesmy w trybie edycji
+                z.Id_zawodnika = zawodnik.Id_zawodnika;
+                zr.Edytuj(z);
+            }else if(trybOkienka == TrybOkienka.Usuwanie)
+            {
+                if (txtPotwierdzenie.Text!="tak")
+                {
+                    MessageBox.Show("Aby potwierdzić usuwanie wpisz: \"tak\" w poniższym polu", "Potwierdzenie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPotwierdzenie.Visible = true;
+                    return;
+                }
+                else
+                {
+                    zr.Usun(zawodnik.Id_zawodnika);
+                }
+               
+            }
+           
 
             this.Close();
             frmZawodnicy.Odswiez();
